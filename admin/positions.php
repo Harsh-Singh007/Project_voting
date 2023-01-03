@@ -129,6 +129,7 @@ $sql = mysqli_query($con, "INSERT INTO tbpositions (position_name) VALUES ('$new
     <td><input type="text" name="position" /></td>
     <td><input type="submit" name="Submit" value="Add" /></td>
 </tr>
+  
 </table>
 <hr>
 <table border="0" width="420" align="center">

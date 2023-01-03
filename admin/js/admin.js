@@ -247,29 +247,30 @@ return validationVerified;
 //validate position form
 function positionValidate(positionForm){
 
-var validationVerified=true;
-var errorMessage="";
-var okayMessage="click OK to add new position";
-
-if (positionForm.position.value == "")
-{
-errorMessage+="Please enter the position name!\n";
-validationVerified=false;
-}
-if (!isValidPosition(positionForm.position.value)) {
-errorMessage+="Invalid position provided! Don't leave spaces between words i.e. Try to replace spaces with a dash (-)\n";
-validationVerified=false;
-}
-if(!validationVerified)
-{
-alert(errorMessage);
-}
-if(validationVerified)
-{
-alert(okayMessage);
-}
-return validationVerified;
-}
+    var validationVerified=true;
+    var errorMessage="";
+    var okayMessage="click OK to add new position";
+    
+    if (positionForm.position.value == "")
+    {
+    errorMessage+="Please enter the position name!\n";
+    validationVerified=false;
+    }
+    if (!isValidPosition(positionForm.position.value)) {
+    errorMessage+="Invalid position provided! Don't leave spaces between words i.e. Try to replace spaces with a dash (-)\n";
+    validationVerified=false;
+    }
+    if(!validationVerified)
+    {
+    alert(errorMessage);
+    }
+    if(validationVerified)
+    {
+    alert(okayMessage);
+    }
+    return validationVerified;
+    }
+    
 
 //validate candidate form
 function candidateValidate(candidateForm){

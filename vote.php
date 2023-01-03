@@ -173,7 +173,7 @@ $(document).ready(function(){
     </div>
     <div class="col-sm-8 text-left"> 
       
-    <table width="420" align="center" style="margin-top:30px">
+    <table width="420" align="center" style="margin-top:30px" >
 <form name="fmNames" id="fmNames" method="post" action="vote.php" onSubmit="return positionValidate(this)">
 <tr>
     <td>Choose Position</td>
@@ -198,7 +198,7 @@ $(document).ready(function(){
 </tr>
 </form> 
 </table>
-<table width="270" align="center">
+<table  width="270" align="center">
 <form>
 <tr>
     <th>Candidates:</th>

@@ -15,7 +15,7 @@
            
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
+    background:linear-gradient(to right, #e6dada, #274046);
     color: #1c1e21;
 }
 
@@ -194,11 +194,12 @@ footer small {
     <main>
         <div class="row">
             <div class="colm-logo">
-           
             </div>
             <div class="colm-form">
                 <div class="form-container">
                     <form   name="fortm1" method="post" action="checklogin.php" onSubmit="return loginValidate(this)">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2633/2633863.png" height="50px" width="80px">
+
                     <input  type="text" placeholder="Email address or phone number" name="myusername" id="myusername">
                     <input type="password" placeholder="Password"  name="mypassword" id="mypassword">
                     <input type="submit" name="Submit" value="Login">
