@@ -38,7 +38,7 @@ footer {
     width: 100%;
     max-width: 1000px;
     position: absolute;
-    left: 50%;
+    left: 35%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
@@ -46,6 +46,7 @@ footer {
 .colm-logo {
     flex: 0 0 50%;
     text-align: left;
+    min-width: 700px;
 }
 
 .colm-form {
@@ -54,10 +55,10 @@ footer {
 }
 
 .colm-logo img {
-    max-width: 400px;
+    max-width: 600px;
 }
 
-.colm-logo h2 {
+.colm-logo h2 { 
     font: 26px;
     font-weight: 400;
     padding: 0 30px;
@@ -194,7 +195,8 @@ footer small {
     <main>
         <div class="row">
             <div class="colm-logo">
-           <img src="https://img.lovepik.com/element/45009/2310.png_300.png" width="300px">
+             <img src="images\login.png" alt="voting logo" width="500px">
+
             </div>
             <div class="colm-form">
                 <div class="form-container">

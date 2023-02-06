@@ -123,7 +123,7 @@ $sql = mysqli_query($con, "INSERT INTO tbpositions (position_name) VALUES ('$new
     <div id="container">
 <table width="380" align="center">
 <CAPTION><h3>ADD NEW POSITION</h3></CAPTION>
-<form name="fmPositions" id="fmPositions" action="positions.php" method="post" onsubmit="return positionValidate(this)">
+<form name="fmPositions" id="fmPositions" action="positions.php" method="post">
 <tr>
     <td>Position Name</td>
     <td><input type="text" name="position" /></td>
