@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2018 at 07:35 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Generation Time: Feb 10, 2023 at 06:04 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `poll`
+-- Database: `poll_mysqli`
 --
 
 -- --------------------------------------------------------
@@ -34,17 +33,15 @@ CREATE TABLE `tbadministrators` (
   `last_name` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbadministrators`
 --
 
 INSERT INTO `tbadministrators` (`admin_id`, `first_name`, `last_name`, `email`, `password`) VALUES
-(1, 'Kimanii', 'Kahiga', 'admin@example.com', '21232f297a57a5a743894a0e4a801fc3'),
-(2, 'admin', 'admin', 'admin@example.com', 'admin'),
-(3, '', '', '', '29e457082db729fa1059d4294ede3909'),
-(4, 'AJAY', 'kumae', 'ajay@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b');
+(1, 'harsh', 'singh', 'admin@example.com', '21232f297a57a5a743894a0e4a801fc3'),
+(2, 'admin', 'admin', 'admin@example.com', 'admin');
 
 -- --------------------------------------------------------
 
@@ -57,7 +54,7 @@ CREATE TABLE `tbcandidates` (
   `candidate_name` varchar(45) NOT NULL,
   `candidate_position` varchar(45) NOT NULL,
   `candidate_cvotes` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbcandidates`
@@ -66,18 +63,8 @@ CREATE TABLE `tbcandidates` (
 INSERT INTO `tbcandidates` (`candidate_id`, `candidate_name`, `candidate_position`, `candidate_cvotes`) VALUES
 (3, 'Luis Nani', 'Chairperson', 11),
 (4, 'Wayne Rooney', 'Chairperson', 20),
-(6, 'Thomas Vaemalen', 'Vice-Secretary', 2),
 (8, 'Michael Walters', 'Secretary', 9),
 (9, 'Roberto Mancini', 'Secretary', 46),
-(10, 'Alex Ferguson', 'Treasurer', 0),
-(11, 'Howard Web', 'Vice-Treasurer', 3),
-(12, 'Richard Santana', 'Vice-Treasurer', 0),
-(13, 'Chemical Reaction', 'Treasurer', 0),
-(14, 'Danny Welbeck', 'Vice-Secretary', 0),
-(15, 'Paul Allen', 'Organizing-Secretary', 4),
-(16, 'Bill Gates', 'Organizing-Secretary', 4),
-(17, 'Exponential Functions', 'Vice-Chairperson', 31),
-(18, 'Algebraic Equations', 'Vice-Chairperson', 14),
 (19, 'abhishek', 'HOD', 7),
 (20, 'Aman', 'HOD', 2),
 (22, 'Vaibhav', 'HOD', 2);
@@ -93,7 +80,7 @@ CREATE TABLE `tblvotes` (
   `voter_id` int(11) NOT NULL,
   `position` varchar(50) NOT NULL,
   `candidateName` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblvotes`
@@ -118,18 +105,15 @@ CREATE TABLE `tbmembers` (
   `last_name` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbmembers`
 --
 
 INSERT INTO `tbmembers` (`member_id`, `first_name`, `last_name`, `email`, `password`) VALUES
-(1, 'Kimani', 'Kahiga', 'kahiga@gmail.com', '547da2b03f947606f1d06a8dec093e64'),
-(2, 'MacDonald', 'Ngowi', 'mcbcrue08@gmail.com', '14b876400a7ae986df9b17fbaffb9eca'),
-(3, 'test', 'testt', 'test@example.com', '098f6bcd4621d373cade4e832627b4f6'),
 (5, 'Ajay', 'Chaubey', 'ajaychaubey95@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(6, 'anil', 'k', 'anil@gmail.com', '202cb962ac59075b964b07152d234b70');
+(7, 'user', 'hp', 'user@gmail.com', 'ee11cbb19052e40b07aac0ca060c23ee');
 
 -- --------------------------------------------------------
 
@@ -140,7 +124,7 @@ INSERT INTO `tbmembers` (`member_id`, `first_name`, `last_name`, `email`, `passw
 CREATE TABLE `tbpositions` (
   `position_id` int(5) NOT NULL,
   `position_name` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbpositions`
@@ -149,11 +133,6 @@ CREATE TABLE `tbpositions` (
 INSERT INTO `tbpositions` (`position_id`, `position_name`) VALUES
 (1, 'Chairperson'),
 (2, 'Secretary'),
-(5, 'Vice-Secretary'),
-(7, 'Organizing-Secretary'),
-(8, 'Treasurer'),
-(9, 'Vice-Treasurer'),
-(10, 'Vice-Chairperson'),
 (11, 'HOD');
 
 --
@@ -217,7 +196,7 @@ ALTER TABLE `tblvotes`
 -- AUTO_INCREMENT for table `tbmembers`
 --
 ALTER TABLE `tbmembers`
-  MODIFY `member_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `member_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbpositions`
