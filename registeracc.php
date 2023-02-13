@@ -15,16 +15,24 @@
            
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
+    background :linear-gradient(to right, #e6dada, #274046);
     color: #1c1e21;
+}
+h1
+{
+   
+   font-family: 'Courier New', Courier, monospace;
+   
 }
 
 main {
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     position: relative;
-    margin: 0 auto;
+    margin:  auto;
+    
 }
+
 
 footer {
     height: 10vh;
@@ -33,14 +41,14 @@ footer {
 
 .row {
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
 .colm-logo {
@@ -51,6 +59,7 @@ footer {
 .colm-form {
     flex: 0 0 40%;
     text-align: center;
+    
 }
 
 .colm-logo img {
@@ -68,7 +77,7 @@ footer {
     background-color: #ffffff;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 20px black ;
     margin-bottom: 30px;
     margin-top:30px;
     padding: 20px;
@@ -193,6 +202,7 @@ footer small {
 </head>
 <body>
     <main>
+    <center><h1 style="color:white ; font-family: Courier New, Courier, monospace;">Online Voting System</h1></center>
         <div class="row">
             <div class="colm-logo">
 
@@ -218,8 +228,10 @@ VALUES ('$myFirstName','$myLastName', '$myEmail', '$newpass') ");
 die( "You have registered for an account.<br><br>Go to <a href=\"index.php\">Login</a>" );
 }
 
-echo "<center><h3>Register an account by filling in the needed information below:</h3></center><br><br>";
 echo '<form action="registeracc.php" method="post" onsubmit="return registerValidate(this)">';
+echo " <img src='https://cdn-icons-png.flaticon.com/512/2633/2633863.png' height='50px' width='80px'>
+<h1>Voter Registration</h1>";
+echo "<center><h3>Register an account by filling in the needed information below:</h3></center><br><br>";
 echo '<table align="center"><tr><td>';
 echo "<tr><td>First Name:</td><td><input type='text' style=' font-weight:bold;' name='firstname' maxlength='15' value=''></td></tr>";
 echo "<tr><td>Last Name:</td><td><input type='text' style=' font-weight:bold;' name='lastname' maxlength='15' value=''></td></tr>";
@@ -236,6 +248,7 @@ echo "</form>";
                 
             </div>
         </div>
+
     </main>
     
 </body>

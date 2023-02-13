@@ -16,6 +16,7 @@ if(empty($_SESSION['member_id'])){
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+    
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
@@ -23,7 +24,10 @@ if(empty($_SESSION['member_id'])){
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 450px
+      
+
+    }
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -79,7 +83,10 @@ if(empty($_SESSION['member_id'])){
      <img src="https://marketplace.canva.com/EAE5Ba7chRw/1/0/1131w/canva-blue-red-and-white-modern-and-clean-election-illustrated-event-poster-XGQpDCt4ICw.jpg" class="img-rounded" alt="vote" width="180px" height="350px">
     </div>
     <div class="col-sm-8 text-left"> 
-      <center><img src="https://blog.1mission.org/wp-content/uploads/2017/07/welcome-blog-1-1.gif" width="300px"></center>
+    
+      <center>
+      <h2>Voter Panel</h2>
+      <img src="https://blog.1mission.org/wp-content/uploads/2017/07/welcome-blog-1-1.gif" width="300px"></center>
       <br>
       <br>
       <p>The word “vote” means to choose from a list, to elect or to determine. The main goal of voting 
